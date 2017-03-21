@@ -42,14 +42,12 @@ class OpenCommercial {
     // call the URL's openStream() method to get a stream
     BufferedReader urlContent = new BufferedReader(new InputStreamReader(aUrl.openStream()));
     // initialize a string variable
-    String oneInputLine;
     // counter
     int i = 0;
     // System.out.println(firstFiveLines.length);
     // Read URL contents one line a time, and store that line in the string variable
-    while((oneInputLine = urlContent.readLine()) != null && i < firstFiveLines.length) {
-	// System.out.println("====");
-	firstFiveLines[i] = oneInputLine;
+    while (address.readLine()!=null && i<5){
+	firstFiveLines[i] = address.readLine();
         // System.out.println(firstFiveLines[i] + i);
 	i++;
         // System.out.println(oneInputLine + i);
@@ -58,9 +56,11 @@ class OpenCommercial {
 
     // System.out.println(Arrays.toString(firstFiveLines));
     // print in reverse order
-    for (int j = firstFiveLines.length - 1; j >= 0; j--) {
-        System.out.println(firstFiveLines[j]); 
+    for(int j=4; j>=0; j--){
+        System.out.println(fiveLines[j]);; 
     }
 
   }
 }
+
+
