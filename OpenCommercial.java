@@ -3,7 +3,9 @@
 import java.net.*;
 import java.io.*;
 import java.util.Arrays;
-
+import java.util.Scanner; 
+/** I'm more inclined to use Scanner than BufferedReader
+*/
 /**  A class that provides a main function to read five lines of a commercial
  *   Web page and print them in reverse order, given the name of a company.
  */
@@ -19,14 +21,16 @@ class OpenCommercial {
    */
   public static void main(String[] arg) throws Exception {
 
+    /** if use BufferedReader
     BufferedReader keyboard;
-    String inputLine;
-
     keyboard = new BufferedReader(new InputStreamReader(System.in));
-
+    */
+    Scanner user_input = new Scanner( System.in );
+    String inputLine;
     System.out.print("Please enter the name of a company (without spaces): ");
     System.out.flush();        /* Make sure the line is printed immediately. */
-    inputLine = keyboard.readLine();
+    inputline =  user_input.nextLine();
+    /** inputLine = user_input.readLine(); */
 
     /* Replace this comment with your solution.  */
     String address = "http://www." + inputLine + ".com";
@@ -60,5 +64,3 @@ class OpenCommercial {
 
   }
 }
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
