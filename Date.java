@@ -5,6 +5,9 @@ import java.io.*;
 class Date {
 
   /* Put your private data fields here. */
+  private int month;
+  private int day;
+  private int year;
 
   /** Constructs a date with the given month, day and year.   If the date is
    *  not valid, the entire program will halt with an error message.
