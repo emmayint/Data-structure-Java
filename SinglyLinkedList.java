@@ -1,5 +1,11 @@
 public class SinglyLinkedList {
       …
+      /**Insertion into a singly-linked list has two special cases. 
+         It's insertion a new node before the head (to the very beginning of the list), 
+         and after the tail (to the very end of the list). 
+         In any other case, new node is inserted in the middle of the list and so, 
+         has a predecessor and successor in the list.**/
+            
  
       public void addLast(SinglyLinkedListNode newNode) {
             if (newNode == null)
